@@ -53,6 +53,7 @@ body .video video {
 }
 
 main {
+  background: #0002;
   min-height: 500px;
   width: 100%;
   display: grid;
@@ -74,8 +75,7 @@ main .menu {
   overflow: hidden;
   z-index: 2;
   backdrop-filter: blur(8px);
-  border-right: solid 1px var(--c-darker);
-  border-left: solid 1px var(--c-darker);
+  border-right: solid 1px var(--c-lighter);
 }
 main.open .menu {
   width: 200px;
@@ -93,7 +93,7 @@ main .menu .avatar .thumb {
 }
 main .menu .avatar .name {
   color: var(--c-elements);
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
@@ -110,7 +110,7 @@ main .menu .primary {
   overflow: hidden;
 }
 main .menu .primary .menu-item {
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   color: var(--c-elements);
   display: flex;
@@ -167,7 +167,7 @@ main .topbar {
   height: 60px;
   z-index: 1;
   background: var(--c-dark);
-  border-bottom: solid 1px var(--c-darker);
+  border-bottom: solid 1px var(--c-lighter);
   backdrop-filter: blur(6px);
   padding: var(--i-padding);
   display: flex;
@@ -176,7 +176,9 @@ main .topbar {
   align-items: center;
 }
 main .topbar .current {
-  font-weight: 600;
+  color: var(--c-elements);
+  font-size: 18px;
+  font-weight: 700;
 }
 main .topbar .search {
   cursor: pointer;
@@ -231,6 +233,7 @@ main.search .topbar .search .bar {
   visibility: visible;
 }
 main .topbar .search .bar::placeholder {
+  font-family: var(--font);
   color: var(--c-elements);
 }
 main .topbar nav {
@@ -254,12 +257,14 @@ main .topbar nav .menu-item {
 
 main .dashboard {
   margin-top: 60px;
-  background-color: var(--c-lighter);
+  background-color: var(--c-light);
   backdrop-filter: blur(6px);
 }
 
 main .side {
-  background-color: orange;
+  background-color: var(--c-medium);
+  backdrop-filter: blur(6px);
+  border-top: solid 1px var(--c-lighter);
 }
 
 @media (min-width: 1024px) {
