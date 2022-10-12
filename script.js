@@ -4,10 +4,11 @@ const search = document.querySelector('.search label');
 const current = document.querySelector('.current');
 const menuItems = document.querySelectorAll('.primary .menu-item');
 
-expander.addEventListener('click', () => {
-  main.classList.toggle('open');
+expander.addEventListener('click', () => main.classList.toggle('open'));
+search.addEventListener('click', () => main.classList.toggle('search'));
+menuItems.forEach((item, i) => {
+  item.addEventListener(
+    'click',
+    () => (current.innerText = item.querySelector('.desc').textContent)
+  );
 });
-search.addEventListener('click', () => {
-  main.classList.toggle('search');
-});
-menuItems
