@@ -35,7 +35,7 @@ body {
   position: relative;
 }
 body .video {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -53,7 +53,6 @@ body .video video {
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 main {
@@ -66,7 +65,8 @@ main {
 }
 
 main .menu {
-  position: absolute;
+  position: fixed;
+  top: 0;
   left: 0;
   background-color: var(--c-darker);
   display: flex;
@@ -163,7 +163,7 @@ main .menu .expander:hover {
 }
 
 main .topbar {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: calc(100% - 60px);
@@ -292,12 +292,20 @@ main .side {
   .container {
     margin: var(--o-padding);
     box-shadow: 0 0px 1rem #0003;
+    overflow: hidden;
   }
   main {
     min-height: 500px;
     max-height: calc(100vh - (2 * var(--o-padding)));
     border-radius: var(--radius);
     grid-template-columns: 2fr 1fr;
+  }
+  main .menu {
+    position: absolute;
+    top: unset;
+  }
+  main .topbar {
+    position: absolute;
   }
   main .topbar .search {
     margin-right: unset;
