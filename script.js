@@ -11,5 +11,6 @@ menuItems.forEach((item, i) => {
     current.innerText = item.querySelector('.desc').textContent;
     menuItems.forEach((item) => item.classList.remove('active'));
     item.classList.add('active');
+    main.classList.remove('open');
   });
 });
