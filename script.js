@@ -1,6 +1,8 @@
 const main = document.querySelector('main');
 const expander = document.querySelector('.expander');
 const search = document.querySelector('.search label');
+const current = document.querySelector('.current');
+const menuItems = document.querySelectorAll('.primary .menu-item');
 
 expander.addEventListener('click', () => {
   main.classList.toggle('open');
@@ -8,3 +10,4 @@ expander.addEventListener('click', () => {
 search.addEventListener('click', () => {
   main.classList.toggle('search');
 });
+menuItems
