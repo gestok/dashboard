@@ -11,7 +11,6 @@
   --c-medium: #cbe3f060;
   --c-dark: #b8d8e760;
   --c-darker: #9ac5db60;
-
   --c-elements: #fff;
   --c-bg-elements: #0002;
 }
@@ -22,7 +21,6 @@
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
   font-family: var(--font), sans-serif;
   color: black;
   background-color: white;
@@ -43,6 +41,7 @@ body .video {
 }
 body .video video {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -64,7 +63,7 @@ main {
 main .menu {
   position: absolute;
   left: 0;
-  background-color: #9ac5dba0;
+  background-color: var(--c-darker);
   display: flex;
   flex-direction: column;
   width: 62px;
@@ -116,12 +115,11 @@ main .menu .primary .menu-item {
   color: var(--c-elements);
   display: flex;
   gap: 8px;
+  align-items: center;
+  padding-left: 10px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
 }
 main.open .menu .primary .menu-item {
   width: 100%;
@@ -182,6 +180,7 @@ main .topbar .current {
 }
 main .topbar .search {
   cursor: pointer;
+  color: var(--c-elements);
   border-radius: 50%;
   max-width: 40px;
   width: 100%;
@@ -195,7 +194,7 @@ main .topbar .search {
 }
 main .topbar .search:hover,
 main.search .topbar .search {
-  background: #fff;
+  background: var(--c-bg-elements);
 }
 main.search .topbar .search {
   border-radius: var(--max-radius);
@@ -216,6 +215,7 @@ main .topbar .search label {
   cursor: inherit;
 }
 main .topbar .search .bar {
+  color: var(--c-elements);
   background: unset;
   width: 100%;
   padding: 1px 10px 0 34px;
@@ -230,6 +230,9 @@ main.search .topbar .search .bar {
   opacity: 1;
   visibility: visible;
 }
+main .topbar .search .bar::placeholder {
+  color: var(--c-elements);
+}
 main .topbar nav {
   overflow: auto;
   white-space: nowrap;
@@ -242,7 +245,7 @@ main .topbar nav::-webkit-scrollbar {
   height: 2px;
 }
 main .topbar nav::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: var(--c-bg-elements);
 }
 main .topbar nav .menu-item {
   text-decoration: none;
@@ -262,6 +265,7 @@ main .side {
 @media (min-width: 1024px) {
   .container {
     margin: var(--o-padding);
+    box-shadow: 0 0px 1rem #0003;
   }
   main {
     border-radius: var(--radius);
@@ -270,7 +274,7 @@ main .side {
     max-width: 200px;
     border-radius: var(--max-radius);
     cursor: default;
-    background: #fff;
+    background: var(--c-bg-elements);
   }
   main .topbar .search .bar {
     opacity: 1;
