@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+.active {
+  background: var(--c-bg-elements);
+}
+
 body {
   margin: 0;
   font-family: var(--font), sans-serif;
@@ -54,7 +58,7 @@ body .video video {
 
 main {
   background: var(--c-bg-elements);
-  min-height: 500px;
+  min-height: 100vh;
   width: 100%;
   display: grid;
   padding-left: 62px;
@@ -259,12 +263,28 @@ main .dashboard {
   margin-top: 60px;
   background-color: var(--c-light);
   backdrop-filter: blur(6px);
+  padding: var(--o-padding);
+  display: grid;
+  grid-gap: var(--o-padding);
+}
+main .dashboard .cardcolumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--o-padding);
+}
+main .dashboard .cardcolumn .card {
+  padding: var(--i-padding);
+  background: #fff5;
+  border-radius: var(--radius);
+  min-height: 140px;
 }
 
 main .side {
   background-color: var(--c-medium);
   backdrop-filter: blur(6px);
   border-top: solid 1px var(--c-lighter);
+  padding: var(--o-padding);
+  display: grid;
 }
 
 @media (min-width: 1024px) {
@@ -273,7 +293,10 @@ main .side {
     box-shadow: 0 0px 1rem #0003;
   }
   main {
+    min-height: 500px;
+    max-height: calc(100vh - (2 * var(--o-padding)));
     border-radius: var(--radius);
+    grid-template-columns: 2fr 1fr;
   }
   main .topbar .search {
     margin-right: unset;
@@ -286,5 +309,13 @@ main .side {
   main .topbar .search .bar {
     opacity: 1;
     visibility: visible;
+  }
+  main .dashboard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main .side {
+    border-top: unset;
+    border-left: solid 1px var(--c-lighter);
+    margin-top: 60px;
   }
 }
