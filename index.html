@@ -9,10 +9,16 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lucaburgio/iconoir@main/css/iconoir.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="script.js"></script>
   </head>
-  <body class="container">
-    <main>
+  <body>
+    <main class="container">
       <div class="menu">
         <div class="avatar">
           <img
@@ -56,11 +62,24 @@
           <span class="iconoir-arrow-right"></span>
         </button>
       </div>
-      <div class="main">
-        <nav class="secondary"></nav>
-        <div class="dashboard"></div>
+      <div class="topbar">
+        <span class="current">Dashboard</span>
+        <span class="search">
+          <label><span class="iconoir-search"></span></label>
+          <input class="bar" type="text" placeholder="Search..." />
+        </span>
+        <nav>
+          <a href="#" class="menu-item">Orders</a>
+          <a href="#" class="menu-item">Clients</a>
+          <a href="#" class="menu-item">Sections</a>
+          <a href="#" class="menu-item">Products</a>
+        </nav>
       </div>
+      <div class="dashboard">dashboard</div>
       <div class="side">side</div>
     </main>
+    <div class="video">
+      <video src='https://firebasestorage.googleapis.com/v0/b/george-chond.appspot.com/o/waves-loop-min.webm?alt=media&token=5041ab72-c83e-4475-8f2b-efd653a3635b' muted autoplay loop></video>
+    </div>
   </body>
 </html>
