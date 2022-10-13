@@ -19,9 +19,8 @@ menuItems.forEach((item, i) => {
 const dummyData = async () => {
   const url =
     'https://newsdata.io/api/1/news?apikey=pub_12243ef8ffe3a30fc0aee15ea063f3a766e0b&language=en&category=technology';
-  // const res = await fetch(url);
-  // const data = await res.json();
-  const data = {};
+  const res = await fetch(url);
+  const data = await res.json();
 
   mainCards.forEach((card, i) => {
     if (data.status === 'success') {
