@@ -245,7 +245,7 @@ main .topbar {
   border-bottom: solid 1px var(--c-lighter);
   -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
-  padding: var(--o-padding);
+  padding: 0 var(--o-padding);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,9 +680,9 @@ main .side .weather .meta .datetime .time {
     visibility: visible;
   }
   main .dashboard {
-    margin-top: 65px;
+    margin-top: 60px;
     border-top: unset;
-    height: calc(100vh - (2 * var(--o-padding)) - 65px);
+    height: calc(100vh - (2 * var(--o-padding)) - 60px);
     -ms-grid-columns: 1fr var(--o-padding) 1fr var(--o-padding) 1fr;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -690,9 +690,9 @@ main .side .weather .meta .datetime .time {
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
-    height: calc(100vh - (2 * var(--o-padding)) - 65px);
+    height: calc(100vh - (2 * var(--o-padding)) - 60px);
     border-top: unset;
-    margin-top: 65px;
+    margin-top: 60px;
     border-radius: 0 0 var(--radius) 0;
   }
 }
