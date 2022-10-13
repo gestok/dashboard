@@ -558,6 +558,7 @@ main .side .card ul li:last-child {
   border-bottom: none;
 }
 main .side .weather .condition {
+  opacity: 0.65;
   position: absolute;
   right: 10px;
   pointer-events: none;
