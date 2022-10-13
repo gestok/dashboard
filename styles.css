@@ -422,33 +422,6 @@ main .dashboard .cardcolumn {
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
-main .dashboard .cardcolumn .card .thumb {
-  position: relative;
-  border-radius: var(--radius);
-  margin: 4px 0;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-main .dashboard .cardcolumn .card .thumb::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: -o-linear-gradient(45deg, #ff980094, #03a9f4a3);
-  background: linear-gradient(45deg, #ff980094, #03a9f4a3);
-}
-main .dashboard .cardcolumn .card .thumb img {
-  width: 100%;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 main .dashboard .cardcolumn .card .content {
   font-size: 14px;
 }
