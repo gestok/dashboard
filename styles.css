@@ -222,9 +222,6 @@ main .menu .expander {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-main .menu .expander:hover {
-  background-color: var(--c-bg-elements);
-}
 main.open .menu .expander,
 main .menu:hover .expander {
   -webkit-transform: rotate(-180deg);
