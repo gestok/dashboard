@@ -110,7 +110,6 @@ main .menu {
   -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
   border-right: solid 1px var(--c-lighter);
-  touch-action: none;
 }
 main.open .menu,
 main .menu:hover {
