@@ -23,33 +23,39 @@ const dummyData = async () => {
   const res = await fetch(url);
   const data = await res.json();
 
-  mainCards.forEach((card, i) => {
-    if (data.status === 'success') {
-      card.querySelector('.title').innerText =
-        data.results[i].title ||
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-      if (data.results[i].description) {
-        card.querySelector('.content').innerText =
-          data.results[i].description.slice(0, -11) + '...';
-      } else {
-        card.querySelector('.content').innerText =
-          'Aliquam vitae laoreet purus. Vivamus tincidunt nibh rhoncus, varius libero dignissim, molestie odio. Aenean sit amet felis et lectus viverra elementum. In quis tortor dignissim, ultrices odio et, dignissim quam. Donec scelerisque lacinia dolor, a pulvinar enim auctor quis. Sed mollis faucibus lacus id sagittis. Nunc et fringilla ipsum, et dignissim erat. Vivamus leo lorem, iaculis tempor quam nec, malesuada ullamcorper ipsum...';
-      }
-      if (data.results[i].image_url) {
-        card.querySelector(
-          '.thumb'
-        ).innerHTML = `<img src="${data.results[i].image_url}" />`;
-      }
-    } else {
-      card.querySelector('.title').innerText =
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-      card.querySelector('.content').innerText =
-        'Aliquam vitae laoreet purus. Vivamus tincidunt nibh rhoncus, varius libero dignissim, molestie odio. Aenean sit amet felis et lectus viverra elementum. In quis tortor dignissim, ultrices odio et, dignissim quam. Donec scelerisque lacinia dolor, a pulvinar enim auctor quis. Sed mollis faucibus lacus id sagittis. Nunc et fringilla ipsum, et dignissim erat. Vivamus leo lorem, iaculis tempor quam nec, malesuada ullamcorper ipsum...'.slice(
-          0,
-          Math.round(Math.random() * -200)
-        );
-    }
-  });
+  console.log(mainCards.length);
+
+  Promise.all(
+    Array(mainCards.length)
+      .fill(null)
+      .map((card, i) => {
+        if (data.status === 'success') {
+          mainCards[i].querySelector('.title').innerText =
+            data.results[i].title ||
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+          if (data.results[i].description) {
+            mainCards[i].querySelector('.content').innerText =
+              data.results[i].description.slice(0, -11) + '...';
+          } else {
+            mainCards[i].querySelector('.content').innerText =
+              'Aliquam vitae laoreet purus. Vivamus tincidunt nibh rhoncus, varius libero dignissim, molestie odio. Aenean sit amet felis et lectus viverra elementum. In quis tortor dignissim, ultrices odio et, dignissim quam. Donec scelerisque lacinia dolor, a pulvinar enim auctor quis. Sed mollis faucibus lacus id sagittis. Nunc et fringilla ipsum, et dignissim erat. Vivamus leo lorem, iaculis tempor quam nec, malesuada ullamcorper ipsum...';
+          }
+          if (data.results[i].image_url) {
+            mainCards[i].querySelector(
+              '.thumb'
+            ).innerHTML = `<img src="${data.results[i].image_url}" />`;
+          }
+        } else {
+          mainCards[i].querySelector('.title').innerText =
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+          mainCards[i].querySelector('.content').innerText =
+            'Aliquam vitae laoreet purus. Vivamus tincidunt nibh rhoncus, varius libero dignissim, molestie odio. Aenean sit amet felis et lectus viverra elementum. In quis tortor dignissim, ultrices odio et, dignissim quam. Donec scelerisque lacinia dolor, a pulvinar enim auctor quis. Sed mollis faucibus lacus id sagittis. Nunc et fringilla ipsum, et dignissim erat. Vivamus leo lorem, iaculis tempor quam nec, malesuada ullamcorper ipsum...'.slice(
+              0,
+              Math.round(Math.random() * -200)
+            );
+        }
+      })
+  );
 };
 
 // Weather Data for Athens from open-meteo.com
