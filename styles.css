@@ -424,22 +424,6 @@ main .dashboard .cardcolumn {
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
-main .dashboard .cardcolumn .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 4px;
-  padding: var(--i-padding);
-  background: var(--c-card-main);
-  border-radius: var(--radius);
-  -webkit-box-shadow: 0 4px 8px #0003;
-  box-shadow: 0 4px 8px #0003;
-  border-bottom: solid 2px #fff4;
-}
 main .dashboard .cardcolumn .card .thumb {
   position: relative;
   border-radius: var(--radius);
@@ -538,8 +522,11 @@ main .side {
   -ms-flex-line-pack: start;
   align-content: flex-start;
   overflow: overlay;
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
   order: -1;
 }
+main .dashboard .card,
 main .side .card {
   position: relative;
   color: var(--c-elements);
@@ -650,6 +637,7 @@ main .side .weather .meta .datetime .time {
     width: 74px;
     position: absolute;
     top: unset;
+    border-radius: var(--radius) 0 0 var(--radius);
   }
   main .menu .avatar {
     -ms-flex-wrap: wrap;
@@ -667,6 +655,7 @@ main .side .weather .meta .datetime .time {
     position: absolute;
     width: calc(100% - 74px);
     margin-left: 74px;
+    border-radius: 0 var(--radius) 0 0;
   }
   main .topbar .search {
     margin-right: unset;
@@ -690,8 +679,12 @@ main .side .weather .meta .datetime .time {
     grid-template-columns: repeat(3, 1fr);
   }
   main .side {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
     order: 0;
+    height: calc(100vh - (2 * var(--o-padding)) - 65px);
     border-top: unset;
     margin-top: 65px;
+    border-radius: 0 0 var(--radius) 0;
   }
 }
