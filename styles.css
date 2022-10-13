@@ -110,6 +110,7 @@ main .menu {
   -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
   border-right: solid 1px var(--c-lighter);
+  touch-action: none;
 }
 main.open .menu,
 main .menu:hover {
@@ -221,6 +222,9 @@ main .menu .expander {
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+main .menu .expander:hover {
+  background: var(--c-bg-elements);
 }
 main.open .menu .expander,
 main .menu:hover .expander {
@@ -639,6 +643,9 @@ main .side .weather .meta .datetime .time {
     position: absolute;
     top: unset;
     border-radius: var(--radius) 0 0 var(--radius);
+  }
+  main .menu:hover {
+    border-radius: var(--radius);
   }
   main .menu .avatar {
     -ms-flex-wrap: wrap;

@@ -1,10 +1,12 @@
 const main = document.querySelector('main');
 const search = document.querySelector('.search label');
+const expander = document.querySelector('main .menu .expander');
 const current = document.querySelector('.current');
 const menuItems = document.querySelectorAll('.primary .menu-item');
 const mainCards = document.querySelectorAll('.dashboard .card');
 const weatherContent = document.querySelector('.side .weather .content');
 
+expander.addEventListener('click', () => main.classList.toggle('open'));
 search.addEventListener('click', () => main.classList.toggle('search'));
 menuItems.forEach((item, i) => {
   item.addEventListener('click', () => {
