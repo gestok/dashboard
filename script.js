@@ -6,6 +6,7 @@ const menuItems = document.querySelectorAll('main .menu .primary .menu-item');
 const mainCards = document.querySelectorAll('main .dashboard .card');
 const weatherContent = document.querySelector('.side .weather .content');
 
+document.addEventListener('touchstart', () => {}, true);
 search.addEventListener('click', () => container.classList.toggle('search'));
 menuItems.forEach((item) => {
   item.addEventListener('click', () => {
