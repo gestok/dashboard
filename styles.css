@@ -596,6 +596,7 @@ main .side .weather .content {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  text-shadow: 1px 3px 0px #0008;
 }
 main .side .weather .content .celsius {
   position: relative;
@@ -645,7 +646,7 @@ main .side .weather .meta .datetime .time {
     max-height: calc(100vh - (2 * var(--o-padding)));
     border-radius: var(--radius);
     -ms-grid-columns: auto 380px;
-    grid-template-columns: auto 380px;
+    grid-template-columns: 2fr 1fr;
     padding-left: 74px;
   }
   main .menu {
