@@ -38,9 +38,9 @@ html::-webkit-scrollbar-thumb {
 
 body {
   margin: 0;
-  font-family: var(--font), sans-serif;
-  color: #252525;
-  background-color: white;
+  font-family: var(--font);
+  color: #fefefe;
+  background-color: #252525;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,8 +111,8 @@ main .menu {
   backdrop-filter: blur(1rem);
   border-right: solid 1px var(--c-lighter);
 }
-main.open .menu,
-main .menu:hover {
+main .menu:hover,
+main .menu:active {
   width: 200px;
   border-radius: 0 var(--radius) var(--radius) 0;
 }
@@ -144,8 +144,8 @@ main .menu .avatar .name {
   -ms-user-select: none;
   user-select: none;
 }
-main.open .menu .avatar .name,
-main .menu:hover .avatar .name {
+main .menu:hover .avatar .name,
+main .menu:active .avatar .name {
   opacity: 1;
   visibility: visible;
 }
@@ -175,9 +175,10 @@ main .menu .primary .menu-item {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  -webkit-tap-highlight-color: transparent;
 }
-main.open .menu .primary .menu-item,
-main .menu:hover .primary .menu-item {
+main .menu:hover .primary .menu-item,
+main .menu:active .primary .menu-item {
   width: 100%;
   border-radius: var(--max-radius);
 }
@@ -194,15 +195,12 @@ main .menu .primary .menu-item .desc {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-main.open .menu .primary .menu-item .desc,
-main .menu:hover .primary .menu-item .desc {
+main .menu:hover .primary .menu-item .desc,
+main .menu:active .primary .menu-item .desc {
   opacity: 1;
   visibility: visible;
 }
 main .menu .expander {
-  padding: unset;
-  border: unset;
-  background: unset;
   color: var(--c-elements);
   font-size: 24px;
   border-radius: 50%;
@@ -217,16 +215,12 @@ main .menu .expander {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-main .menu .expander:hover {
-  background: var(--c-bg-elements);
-}
-main.open .menu .expander,
-main .menu:hover .expander {
+main .menu:hover .expander,
+main .menu:active .expander {
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
