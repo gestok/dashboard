@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 html::-webkit-scrollbar {
   width: 6px;
@@ -175,7 +176,6 @@ main .menu .primary .menu-item {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  -webkit-tap-highlight-color: transparent;
 }
 main .menu:hover .primary .menu-item,
 main .menu:active .primary .menu-item {
@@ -324,6 +324,7 @@ main .topbar .search .bar {
 main.search .topbar .search .bar {
   opacity: 1;
   visibility: visible;
+  touch-action: none;
 }
 main .topbar .search .bar::-webkit-input-placeholder {
   font-family: var(--font);
