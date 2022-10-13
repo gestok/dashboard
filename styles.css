@@ -5,7 +5,7 @@
   --o-padding: 1.6rem;
   --radius: 10px;
   --max-radius: 40px;
-  --c-lighter: #1a374d90;
+  --c-lighter: #b1d0e050;
   --c-light: #b1d0e050;
   --c-medium: #6998ab60;
   --c-dark: #40688290;
@@ -29,7 +29,7 @@ html::-webkit-scrollbar-thumb {
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .active {
@@ -45,11 +45,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 100vh;
   position: relative;
 }
@@ -66,7 +66,7 @@ body .video video {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .container {
@@ -94,13 +94,13 @@ main .menu {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 62px;
   height: 100%;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: var(--i-padding);
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -108,7 +108,7 @@ main .menu {
   overflow: hidden;
   z-index: 2;
   -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
   border-right: solid 1px var(--c-lighter);
 }
 main.open .menu,
@@ -121,8 +121,8 @@ main .menu .avatar {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 10px;
 }
 main .menu .avatar .thumb {
@@ -140,9 +140,9 @@ main .menu .avatar .name {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 main.open .menu .avatar .name,
 main .menu:hover .avatar .name {
@@ -155,8 +155,8 @@ main .menu .primary {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 4px;
   overflow: hidden;
 }
@@ -169,8 +169,8 @@ main .menu .primary .menu-item {
   display: flex;
   gap: 8px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-left: 10px;
   border-radius: 50%;
   width: 40px;
@@ -212,11 +212,11 @@ main .menu .expander {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -228,8 +228,8 @@ main .menu .expander:hover {
 main.open .menu .expander,
 main .menu:hover .expander {
   -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 main .topbar {
@@ -243,27 +243,27 @@ main .topbar {
   background: var(--c-dark);
   border-bottom: solid 1px var(--c-lighter);
   -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
   padding: var(--o-padding);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   gap: 10px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 main .topbar .current {
   color: var(--c-elements);
   font-size: 24px;
   font-weight: 700;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 main .topbar .search {
   cursor: pointer;
@@ -276,8 +276,8 @@ main .topbar .search {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-right: auto;
   overflow: hidden;
   position: relative;
@@ -304,11 +304,11 @@ main .topbar .search label {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: 1;
   font-size: 24px;
   cursor: inherit;
@@ -359,8 +359,8 @@ main .topbar nav {
   display: flex;
   height: 40px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 4px;
 }
 main .topbar nav::-webkit-scrollbar {
@@ -374,11 +374,11 @@ main .topbar nav .menu-item {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 30px;
   padding: 0 10px;
   text-decoration: none;
@@ -395,10 +395,10 @@ main .topbar nav .menu-item:hover {
 }
 
 main .dashboard {
-  margin-top: 60px;
+  border-top: solid 1px var(--c-lighter);
   background-color: var(--c-light);
   -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   padding: var(--o-padding);
   display: -ms-grid;
   display: grid;
@@ -421,11 +421,11 @@ main .dashboard .cardcolumn {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: var(--o-padding);
   -ms-flex-item-align: baseline;
-      align-self: baseline;
+  align-self: baseline;
 }
 main .dashboard .cardcolumn .card {
   display: -webkit-box;
@@ -433,14 +433,14 @@ main .dashboard .cardcolumn .card {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 4px;
   padding: var(--i-padding);
   background: var(--c-card-main);
   border-radius: var(--radius);
   -webkit-box-shadow: 0 4px 8px #0003;
-          box-shadow: 0 4px 8px #0003;
+  box-shadow: 0 4px 8px #0003;
   border-bottom: solid 2px #fff4;
 }
 main .dashboard .cardcolumn .card .thumb {
@@ -466,9 +466,9 @@ main .dashboard .cardcolumn .card .thumb img {
   width: 100%;
   pointer-events: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 main .dashboard .cardcolumn .card .content {
   font-size: 14px;
@@ -482,11 +482,11 @@ main .dashboard .cardcolumn .card span {
   max-width: 24px;
   border-radius: 50%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
 }
 main .dashboard .cardcolumn .card span:hover {
@@ -498,12 +498,12 @@ main .dashboard .cardcolumn .card header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 4px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 main .dashboard .cardcolumn .card header a {
   color: inherit;
@@ -521,26 +521,27 @@ main .dashboard .cardcolumn .card .meta {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 4px;
 }
 
 main .side {
+  margin-top: 60px;
   background-color: var(--c-medium);
   -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
-  border-top: solid 1px var(--c-lighter);
+  backdrop-filter: blur(6px);
   padding: var(--o-padding);
   display: -ms-grid;
   display: grid;
   gap: var(--o-padding);
   -ms-flex-line-pack: start;
-      align-content: flex-start;
+  align-content: flex-start;
   overflow: overlay;
+  order: -1;
 }
 main .side .card {
   position: relative;
@@ -549,14 +550,14 @@ main .side .card {
   background: var(--c-bg-elements);
   border-radius: var(--radius);
   -webkit-box-shadow: 0 4px 8px #0003;
-          box-shadow: 0 4px 8px #0003;
+  box-shadow: 0 4px 8px #0003;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 10px;
   border-bottom: solid 2px #0003;
 }
@@ -577,9 +578,9 @@ main .side .weather .condition {
   right: 10px;
   pointer-events: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   max-width: 200px;
   width: 100%;
   float: right;
@@ -593,8 +594,8 @@ main .side .weather .content {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 main .side .weather .content .celsius {
   position: relative;
@@ -610,8 +611,8 @@ main .side .weather .meta {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 6px;
 }
 main .side .weather .meta .datetime,
@@ -620,8 +621,8 @@ main .side .weather .meta .location {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 6px;
 }
 main .side .weather .meta .datetime .time {
@@ -636,7 +637,7 @@ main .side .weather .meta .datetime .time {
   .container {
     margin: var(--o-padding);
     -webkit-box-shadow: 0 0px 1rem #0003;
-            box-shadow: 0 0px 1rem #0003;
+    box-shadow: 0 0px 1rem #0003;
     overflow: hidden;
   }
   main {
@@ -654,10 +655,10 @@ main .side .weather .meta .datetime .time {
   }
   main .menu .avatar {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-bottom: 10px;
     padding-bottom: 10px;
   }
@@ -672,8 +673,8 @@ main .side .weather .meta .datetime .time {
   main .topbar .search {
     margin-right: unset;
     -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    -ms-flex-order: -1;
+    order: -1;
     max-width: 200px;
     border-radius: var(--max-radius);
     cursor: default;
@@ -685,13 +686,14 @@ main .side .weather .meta .datetime .time {
   }
   main .dashboard {
     margin-top: 65px;
+    border-top: unset;
     height: calc(100vh - (2 * var(--o-padding)) - 65px);
     -ms-grid-columns: 1fr var(--o-padding) 1fr var(--o-padding) 1fr;
     grid-template-columns: repeat(3, 1fr);
   }
   main .side {
+    order: 0;
     border-top: unset;
-    border-left: solid 1px var(--c-lighter);
     margin-top: 65px;
   }
 }
