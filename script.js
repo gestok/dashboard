@@ -5,9 +5,16 @@ const current = document.querySelector('.current');
 const menuItems = document.querySelectorAll('main .menu .primary .menu-item');
 const mainCards = document.querySelectorAll('main .dashboard .card');
 const weatherContent = document.querySelector('.side .weather .content');
+const date = document.querySelector('main .side .date');
+const time = document.querySelector('main .side .time');
 
+// Fix :active touch on mobiles
 document.addEventListener('touchstart', () => {}, true);
+
+// Search Expand
 search.addEventListener('click', () => container.classList.toggle('search'));
+
+// Main Menu
 menuItems.forEach((item) => {
   item.addEventListener('click', () => {
     current.innerText = item.querySelector('.desc').textContent;
@@ -16,7 +23,29 @@ menuItems.forEach((item) => {
   });
 });
 
-// Populate News from newsdata.io API
+// Set Date, Time
+const today = new Date();
+const formatZero = (value) => (value < 10 ? '0' + value : value);
+const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+date.innerText = `${today.getDate()} ${
+  months[today.getMonth()]
+}, ${today.getFullYear()}`;
+time.innerText = `${today.getHours()}:${formatZero(today.getMinutes())}`;
+
+// Populate News
 const dummyData = () => {
   mainCards.forEach((card, i) => {
     card.querySelector('.title').innerText =
